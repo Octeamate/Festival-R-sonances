@@ -1,0 +1,25 @@
+{
+  "name": "projet-festival-resonances",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass ./scss/main.scss ./css/style.css --style=compressed",
+    "sass:watch": "sass ./scss/main.scss ./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Octeamate/Festival-R-sonances.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Octeamate/Festival-R-sonances/issues"
+  },
+  "homepage": "https://github.com/Octeamate/Festival-R-sonances#readme",
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}
