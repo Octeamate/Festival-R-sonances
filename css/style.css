@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -54,6 +55,10 @@ small {
   gap: 26px;
 }
 
+.strong {
+  font-weight: 700;
+}
+
 :root {
   --pt-color: #1C1B2E;
   --ct-color: #3A3950;
@@ -82,6 +87,13 @@ small {
   --small-sp: 8px;
 }
 
+.component-section,
+.component-nav {
+  width: 84%;
+  max-width: 1025px;
+  margin: 0 auto;
+}
+
 .l-header {
   display: flex;
   align-items: center;
@@ -104,10 +116,10 @@ small {
 }
 
 .l-header__nav a {
-  text-decoration: none;
+  padding-left: 64px;
   color: #6B6A80;
   font-size: 16px;
-  padding-left: 64px;
+  text-decoration: none;
 }
 
 .l-header__nav a:hover {
@@ -115,21 +127,30 @@ small {
   text-decoration: underline;
 }
 
+/* =========================================================
+   BOUTONS HEADER
+   ========================================================= */
 .btn--secondary {
+  padding: 8px;
   border: 2px solid #1C1B2E;
   border-radius: 6px;
-  padding: 8px;
 }
 
 .btn--primary {
-  background-color: #C8402A;
   padding: 8px;
+  background-color: #C8402A;
   color: #FFFFFF;
   border: none;
   border-radius: 6px;
 }
 
+/* =========================================================
+   INTRODUCTION DE PAGE
+   ========================================================= */
 .page-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 64px;
   background-color: #F4F5F7;
 }
@@ -142,6 +163,1525 @@ small {
 .page-intro h1 {
   color: #1C1B2E;
   font-size: 56px;
+}
+
+.page-intro__description {
+  color: #3A3950;
+}
+
+/* =========================================================
+   NAVIGATION DES COMPOSANTS
+   ========================================================= */
+.component-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E3E5EA;
+}
+
+.component-nav a {
+  color: #C8402A;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.component-nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+.component-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* =========================================================
+   TITRES DE SECTIONS
+   ========================================================= */
+.section-heading h2 {
+  margin: 0;
+  color: #1C1B2E;
+  font-size: 40px;
+}
+
+.section-heading hr {
+  margin: 8px 0 0;
+  border: 0;
+  border-top: 2px solid #C8402A;
+}
+
+.section-heading > p {
+  margin: 16px 0 16px;
+  color: #6B6A80;
+  font-size: 14px;
+}
+
+p {
+  color: #6B6A80;
+}
+
+.token {
+  margin-bottom: 64px;
+  border: 4px solid red;
+}
+
+.strong {
+  color: #1C1B2E;
+}
+
+/* =========================================================
+   JETONS
+   ========================================================= */
+.token {
+  margin: 0;
+}
+
+/* Chaque ligne de jetons */
+.token__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Nom de la catégorie à gauche */
+.token__group-title {
+  margin: 0;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   COULEURS
+   ========================================================= */
+.token__colors {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.token__color {
+  width: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.token__color-sample {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+}
+
+.token__color p {
+  width: 100%;
+  margin: 0;
+  color: #6B6A80;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.token__color-name {
+  white-space: nowrap;
+}
+
+/* Couleurs */
+.token__color-sample--main {
+  background-color: #1C1B2E;
+}
+
+.token__color-sample--current {
+  background-color: #3A3950;
+}
+
+.token__color-sample--secondary {
+  background-color: #6B6A80;
+}
+
+.token__color-sample--background {
+  background-color: #FFFFFF;
+  border: 1px solid #E3E5EA;
+}
+
+.token__color-sample--alternate {
+  background-color: #F4F5F7;
+  border: 1px solid #E3E5EA;
+}
+
+.token__color-sample--border {
+  background-color: #E3E5EA;
+}
+
+.token__color-sample--primary {
+  background-color: #C8402A;
+}
+
+.token__color-sample--hover {
+  background-color: #A3311F;
+}
+
+.token__color-sample--accent {
+  background-color: #F4C95D;
+}
+
+.token__color-sample--error {
+  background-color: #B3261E;
+}
+
+/* =========================================================
+   SCÈNES
+   ========================================================= */
+.token__scene-list {
+  display: flex;
+  gap: 16px;
+}
+
+.token__scene {
+  width: 153px;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.token__scene p {
+  margin: 0;
+}
+
+.token__scene-name {
+  margin-bottom: 8px !important;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.token__scene-code {
+  margin-top: 8px !important;
+  color: #6B6A80;
+  font-size: 11px;
+}
+
+/* Scènes */
+.token__scene--lac {
+  background-color: #1F4E8C;
+  color: #FFFFFF;
+}
+
+.token__scene--forest {
+  background-color: #2F6B3A;
+  color: #FFFFFF;
+}
+
+.token__scene--kiosk {
+  background-color: #B87A1E;
+  color: #1C1B2E;
+}
+
+/* =========================================================
+   TYPOGRAPHIE
+   ========================================================= */
+.token__type-list {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+}
+
+.token__type {
+  display: flex;
+  align-items: baseline;
+}
+
+.token__type-example {
+  margin: 0;
+  color: #1C1B2E;
+  white-space: nowrap;
+}
+
+.token__type-info {
+  display: none;
+}
+
+/* Titre 40 */
+.token__type--title .token__type-example {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Sous-titre 28 */
+.token__type--subtitle .token__type-example {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Introduction 20 */
+.token__type--introduction .token__type-example {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Courant 16 */
+.token__type--current .token__type-example {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Petit 14 */
+.token__type--small .token__type-example {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   ESPACEMENTS
+   ========================================================= */
+.token__spacing-list {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  height: 80px;
+}
+
+.token__spacing-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.token__spacing-square {
+  width: 8px;
+  height: 8px;
+  background-color: #C8402A;
+}
+
+.token__spacing-square--16 {
+  width: 16px;
+  height: 16px;
+}
+
+.token__spacing-square--24 {
+  width: 24px;
+  height: 24px;
+}
+
+.token__spacing-square--40 {
+  width: 40px;
+  height: 40px;
+}
+
+.token__spacing-square--64 {
+  width: 64px;
+  height: 64px;
+}
+
+.token__spacing-item p {
+  margin: 0;
+  color: #6B6A80;
+  font-size: 11px;
+}
+
+/* =========================================================
+   BOUTONS
+   ========================================================= */
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+.btn__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.btn__group-title {
+  margin: 0;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn__examples {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 48px;
+}
+
+/* ---------------------------------------------------------
+   BASE DU BOUTON
+   --------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ---------------------------------------------------------
+   PRINCIPAL
+   --------------------------------------------------------- */
+.btn--primary {
+  background-color: #C8402A;
+  color: #FFFFFF;
+  border: 2px solid #C8402A;
+}
+
+.btn--primary:hover {
+  background-color: #A3311F;
+  border-color: #A3311F;
+}
+
+/* ---------------------------------------------------------
+   SECONDAIRE
+   --------------------------------------------------------- */
+.btn--secondary {
+  background-color: #1C1B2E;
+  color: #FFFFFF;
+  border: 2px solid #1C1B2E;
+}
+
+.btn--secondary:hover {
+  background-color: #A3311F;
+  border-color: #A3311F;
+}
+
+/* ---------------------------------------------------------
+   CONTOUR
+   --------------------------------------------------------- */
+.btn--outline {
+  background-color: #FFFFFF;
+  color: #1C1B2E;
+  border: 2px solid #1C1B2E;
+}
+
+.btn--outline:hover {
+  background-color: #F4F5F7;
+}
+
+/* ---------------------------------------------------------
+   BOUTON CLAIR
+   --------------------------------------------------------- */
+.btn__dark-example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 216px;
+  height: 61px;
+  padding: 0;
+  background-color: #1C1B2E;
+  border-radius: 6px;
+}
+
+.btn--light {
+  width: 146px;
+  background-color: #FFFFFF;
+  color: #1C1B2E;
+  border: 2px solid #FFFFFF;
+}
+
+/* ---------------------------------------------------------
+   TAILLES
+   --------------------------------------------------------- */
+.btn--small {
+  min-height: 32px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn--medium {
+  min-height: 40px;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+
+.btn--large {
+  min-height: 48px;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+   ICÔNES
+   --------------------------------------------------------- */
+.btn--icone {
+  gap: 8px;
+}
+
+.btn--icone > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Bouton carré avec icône seule */
+.btn--icone[aria-label] {
+  width: 44px;
+  padding: 8px;
+}
+
+/* ---------------------------------------------------------
+   ÉTAT : SURVOL
+   --------------------------------------------------------- */
+.btn--hover {
+  background-color: #A3311F;
+  color: #FFFFFF;
+  border: 2px solid #A3311F;
+}
+
+/* ---------------------------------------------------------
+   ÉTAT : FOCUS CLAVIER
+   --------------------------------------------------------- */
+.btn--focus {
+  background-color: #C8402A;
+  color: #FFFFFF;
+  border: 2px solid #C8402A;
+  outline: 2px solid rgba(200, 64, 42, 0.35);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px #FFFFFF;
+}
+
+/* ---------------------------------------------------------
+   ÉTAT : DÉSACTIVÉ
+   --------------------------------------------------------- */
+.btn--desactive,
+.btn:disabled {
+  background-color: #DCAEA4;
+  color: #FFFFFF;
+  border: 2px solid #DCAEA4;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------
+   ÉTAT : LOADER
+   --------------------------------------------------------- */
+.btn--loader {
+  width: 130px;
+  height: 42px;
+  background-color: #C8402A;
+  color: #FFFFFF;
+  border: 2px solid #C8402A;
+}
+
+.btn__loader-icon {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #FFFFFF;
+  border-radius: 999px;
+  animation: btn-loader 0.8s linear infinite;
+}
+
+@keyframes btn-loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ---------------------------------------------------------
+   COMBINAISONS / ÉTATS
+   --------------------------------------------------------- */
+.btn__row--states {
+  align-items: start;
+}
+
+.btn__states {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.btn__state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.btn__state > span {
+  color: #6B6A80;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+.badge__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.badge__group-title {
+  margin: 0;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.badge__examples {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  min-height: 32px;
+}
+
+/* ---------------------------------------------------------
+   BASE
+   --------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 24px;
+  padding: 4px 16px;
+  border-radius: 999px;
+  color: #1C1B2E;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------
+   SCÈNES
+   --------------------------------------------------------- */
+.badge--lac {
+  background-color: #1F4E8C;
+  color: #FFFFFF;
+}
+
+.badge--forest {
+  background-color: #2F6B3A;
+  color: #FFFFFF;
+}
+
+.badge--kiosk {
+  background-color: #B87A1E;
+  color: #1C1B2E;
+}
+
+/* ---------------------------------------------------------
+   STATUTS
+   --------------------------------------------------------- */
+.badge--new {
+  background-color: #E5F0E5;
+  color: #2F6B3A;
+}
+
+.badge--last {
+  background-color: #F8EED5;
+  color: #806019;
+}
+
+.badge--complete {
+  background-color: #F6E2DF;
+  color: #B3261E;
+}
+
+/* ---------------------------------------------------------
+   TAILLES
+   --------------------------------------------------------- */
+.badge--small {
+  min-height: 24px;
+  padding: 4px 16px;
+  font-size: 12px;
+}
+
+.badge--large {
+  min-height: 32px;
+  padding: 6px 16px;
+  font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+   STYLES
+   --------------------------------------------------------- */
+.badge--round {
+  background-color: #2F6B3A;
+  color: #FFFFFF;
+  border-radius: 999px;
+}
+
+.badge--outline {
+  background-color: #FFFFFF;
+  color: #2F6B3A;
+  border: 2px solid #2F6B3A;
+}
+
+.badge--square {
+  background-color: #B87A1E;
+  color: #1C1B2E;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------
+   COMPTEUR
+   --------------------------------------------------------- */
+.badge__counter {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 8px 20px;
+  background-color: #1C1B2E;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.badge__counter-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.badge--count {
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+  padding: 0;
+  background-color: #C8402A;
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .badge__row {
+    grid-template-columns: 140px 1fr;
+  }
+  .badge__examples {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .badge__row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+/* =========================================================
+   CARTES
+   ========================================================= */
+/* ---------------------------------------------------------
+   TITRE DES SOUS-SECTIONS
+   --------------------------------------------------------- */
+.card-section-title {
+  margin: 20px 0 16px;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   GRILLES
+   --------------------------------------------------------- */
+.card-grid {
+  display: grid;
+  align-items: start;
+}
+
+.card-grid--base {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.card-grid--variants {
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 16px;
+}
+
+/* ---------------------------------------------------------
+   CARTE DE BASE
+   --------------------------------------------------------- */
+.card {
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border: 1px solid #E3E5EA;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------
+   IMAGE
+   --------------------------------------------------------- */
+.card__image {
+  display: block;
+  width: 100%;
+  height: 128px;
+  object-fit: cover;
+}
+
+/* ---------------------------------------------------------
+   CONTENU
+   --------------------------------------------------------- */
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.card__title {
+  margin: 8px 0 0;
+  color: #1C1B2E;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.card__meta {
+  margin: 4px 0 0;
+  color: #6B6A80;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.card__link {
+  margin-top: 16px;
+  color: #C8402A;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  color: #A3311F;
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+   CARTE SANS IMAGE
+   --------------------------------------------------------- */
+.card--secondary {
+  min-height: 103px;
+  border-top: 4px solid #B87A1E;
+}
+
+/* ---------------------------------------------------------
+   CARTE AVEC FOOTER
+   --------------------------------------------------------- */
+.card--third-footer {
+  border-radius: 6px;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px 16px;
+}
+
+/* ---------------------------------------------------------
+   VARIANTE HEADLINE
+   --------------------------------------------------------- */
+.card--headline {
+  border: 2px solid #1F4E8C;
+}
+
+.card--headline .card__image {
+  height: 153px;
+}
+
+.card--headline .card__title {
+  font-size: 28px;
+}
+
+/* ---------------------------------------------------------
+   VARIANTE COMPACT
+   --------------------------------------------------------- */
+.card--compact .card__image {
+  height: 75px;
+}
+
+.card--compact .card__content {
+  padding: 8px 16px;
+}
+
+.card--compact .card__title {
+  font-size: 16px;
+}
+
+.card--compact .card__link {
+  margin-top: 8px;
+}
+
+/* ---------------------------------------------------------
+   BADGES DANS LES CARTES
+   --------------------------------------------------------- */
+.card .badge {
+  font-size: 9px;
+  min-height: 20px;
+  padding: 3px 8px;
+}
+
+/* ---------------------------------------------------------
+   TEXTE EXPLICATIF SOUS LES CARTES
+   --------------------------------------------------------- */
+.card__caption {
+  margin: 16px 0 20px;
+  color: #6B6A80;
+  font-size: 9px;
+}
+
+/* =========================================================
+   AUTRES CARTES
+   ========================================================= */
+/* =========================================================
+   CARTE HORIZONTALE
+   ========================================================= */
+.card--horizontal {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  width: 530px;
+  min-height: 170px;
+  overflow: hidden;
+  border: 1px solid #E3E5EA;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------
+   IMAGE
+   --------------------------------------------------------- */
+.card--horizontal .card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------------------------------------------------------
+   CONTENU
+   --------------------------------------------------------- */
+.card--horizontal .card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+/* ---------------------------------------------------------
+   TITRE
+   --------------------------------------------------------- */
+.card--horizontal .card__title {
+  margin: 8px 0 0;
+  color: #1C1B2E;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+   --------------------------------------------------------- */
+.card--horizontal .card__description {
+  margin: 16px 0 0;
+  color: #3A3950;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------
+   LIEN
+   --------------------------------------------------------- */
+.card--horizontal .card__link {
+  margin-top: auto;
+}
+
+.card__other {
+  margin-top: 16px;
+}
+
+.card__section-title {
+  margin-bottom: 16px;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   GRILLE
+   --------------------------------------------------------- */
+.card__other-grid {
+  display: grid;
+  grid-template-columns: 170px 170px 150px 150px;
+  gap: 12px;
+  align-items: start;
+  width: 100%;
+}
+
+/* =========================================================
+   CARTE FORMULE
+   ========================================================= */
+.card--formula {
+  position: relative;
+  min-height: 205px;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: #FFFFFF;
+  border: 1px solid #E3E5EA;
+  border-radius: 6px;
+}
+
+.card--formula .card__body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.card--formula .card__title {
+  margin: 0 0 8px;
+  color: #1C1B2E;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__price {
+  margin: 0;
+  color: #C8402A;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.card__separator {
+  height: 1px;
+  margin: 16px 0;
+  background-color: #E3E5EA;
+}
+
+/* ---------------------------------------------------------
+   LISTE DES AVANTAGES
+   --------------------------------------------------------- */
+.card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #3A3950;
+  font-size: 11px;
+}
+
+.card__features li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.card__features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2F6B3A;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   BOUTON DE CARTE
+   --------------------------------------------------------- */
+.card__action {
+  width: 100%;
+  margin-top: auto;
+  min-height: 32px;
+  font-size: 14px;
+}
+
+/* =========================================================
+   PASS 3 JOURS — CARTE MISE EN AVANT
+   ========================================================= */
+.card--formula-featured {
+  background-color: #1C1B2E;
+  border-color: #1C1B2E;
+}
+
+.card--formula-featured .card__title {
+  color: #FFFFFF;
+}
+
+.card--formula-featured .card__price {
+  color: #F4C95D;
+}
+
+.card--formula-featured .card__separator {
+  background-color: #3A3950;
+}
+
+.card--formula-featured .card__features {
+  color: #FFFFFF;
+}
+
+.card--formula-featured .card__features li::before {
+  color: #F4C95D;
+}
+
+/* ---------------------------------------------------------
+   BADGE "LE PLUS CHOISI"
+   --------------------------------------------------------- */
+.card__featured {
+  position: absolute;
+  top: -8px;
+  left: 16px;
+  padding: 3px 16px;
+  background-color: #F4C95D;
+  border-radius: 999px;
+  color: #1C1B2E;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* =========================================================
+   CARTE SCÈNE
+   ========================================================= */
+.card--band {
+  min-height: 96px;
+  padding: 0;
+  background-color: #1F4E8C;
+  border-radius: 6px;
+}
+
+.card--band .card__body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.card--band .card__title {
+  margin: 0 0 2px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card--band .card__text {
+  margin: 0 0 8px;
+  color: #FFFFFF;
+  font-size: 11px;
+}
+
+.card--band .card__link {
+  margin-top: auto;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* =========================================================
+   CARTE INFORMATIONS
+   ========================================================= */
+.card--info {
+  min-height: 96px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #E3E5EA;
+  border-radius: 6px;
+}
+
+.card--info .card__body {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.card__info-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.card__info-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  background-color: #F4F5F7;
+  border-radius: 999px;
+  color: #C8402A;
+  font-size: 10px;
+}
+
+.card--info .card__title {
+  margin: 0;
+  color: #1C1B2E;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card--info .card__text {
+  margin: 0;
+  color: #3A3950;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FORMULAIRES
+   ========================================================= */
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+.form__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.form__group-title {
+  margin: 28px 0 0;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form__fields {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* ---------------------------------------------------------
+   CHAMP
+   --------------------------------------------------------- */
+.form__field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form__field label {
+  margin-bottom: 8px;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form__field input,
+.form__field select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 42px;
+  padding: 0 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #CBD0D8;
+  border-radius: 6px;
+  color: #3A3950;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+.form__field input:focus,
+.form__field select:focus {
+  outline: none;
+}
+
+/* ---------------------------------------------------------
+   TEXTE D'AIDE
+   --------------------------------------------------------- */
+.form__help {
+  margin-top: 8px;
+  color: #6B6A80;
+  font-size: 11px;
+}
+
+/* ---------------------------------------------------------
+   FOCUS
+   --------------------------------------------------------- */
+.form--focus input {
+  border-color: #C8402A;
+  box-shadow: 0 0 0 2px rgba(200, 64, 42, 0.25);
+}
+
+/* ---------------------------------------------------------
+   EMAIL / ERREUR
+   --------------------------------------------------------- */
+.form--mail input {
+  border-color: #B3261E;
+}
+
+.form__error {
+  margin-top: 8px;
+  color: #B3261E;
+  font-size: 11px;
+}
+
+/* ---------------------------------------------------------
+   DÉSACTIVÉ
+   --------------------------------------------------------- */
+.form--desactive input {
+  background-color: #F4F5F7;
+  color: #6B6A80;
+  border-color: #CBD0D8;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------
+   LISTE ET CASES
+   --------------------------------------------------------- */
+.form__list {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.form--select {
+  width: 252px;
+}
+
+.form--select select {
+  appearance: auto;
+}
+
+/* ---------------------------------------------------------
+   CHECKBOX
+   --------------------------------------------------------- */
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 42px;
+  color: #3A3950;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form__checkbox-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #CBD0D8;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form__checkbox input:checked + .form__checkbox-box {
+  background-color: #C8402A;
+  border-color: #C8402A;
+}
+
+.form__checkbox-text {
+  color: #3A3950;
+}
+
+/* =========================================================
+   FILTRES
+   ========================================================= */
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+.filter__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.filter__group-title {
+  margin: 16px 0 0;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.filter__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ---------------------------------------------------------
+   GROUPE DE FILTRES
+   --------------------------------------------------------- */
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter__button {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #E3E5EA;
+  border-radius: 999px;
+  color: #3A3950;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter__button:hover {
+  border-color: #1C1B2E;
+}
+
+/* ---------------------------------------------------------
+   FILTRE ACTIF
+   --------------------------------------------------------- */
+.filter--is-active {
+  background-color: #1C1B2E;
+  border-color: #1C1B2E;
+  color: #FFFFFF;
+}
+
+/* ---------------------------------------------------------
+   TEXTE SOUS LES FILTRES
+   --------------------------------------------------------- */
+.filter__caption {
+  margin: 8px 0 0;
+  color: #6B6A80;
+  font-size: 11px;
+}
+
+/* =========================================================
+   QUESTIONS FRÉQUENTES
+   ========================================================= */
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+.faq__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.faq__group-title {
+  margin: 20px 0 0;
+  color: #1C1B2E;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   FAQ
+   --------------------------------------------------------- */
+.faq {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border: 1px solid #E3E5EA;
+  border-radius: 12px;
+}
+
+/* ---------------------------------------------------------
+   QUESTION
+   --------------------------------------------------------- */
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 52px;
+  padding: 16px 20px;
+  background-color: transparent;
+  border: none;
+  color: #1C1B2E;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #1C1B2E;
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* ---------------------------------------------------------
+   FAQ FERMÉE
+   --------------------------------------------------------- */
+.faq--is-closed {
+  border-color: #E3E5EA;
+}
+
+.faq--is-closed .faq__answer {
+  display: none;
+}
+
+/* ---------------------------------------------------------
+   FAQ OUVERTE
+   --------------------------------------------------------- */
+.faq--is-open {
+  border: 2px solid #1C1B2E;
+}
+
+.faq--is-open .faq__question {
+  min-height: 52px;
+}
+
+/* ---------------------------------------------------------
+   RÉPONSE
+   --------------------------------------------------------- */
+.faq__answer {
+  padding: 0 20px 20px;
+}
+
+.faq__answer p {
+  margin: 0;
+  color: #3A3950;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,2192 @@
+@use '../abstracts/variables' as *;
+
+.component-section,
+.component-nav {
+    width: 84%;
+    max-width: $desktop-min;
+
+    margin: 0 auto;
+}
+
+
+.l-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: $med-sp;
+
+    background-color: $bgc-color;
+
+    border-bottom: 1px solid $border-color;
+}
+
+.l-header__logo {
+    width: 204px;
+}
+
+.l-header__nav {
+    list-style: none;
+}
+
+.l-header__nav li {
+    display: flex;
+}
+
+.l-header__nav a {
+    padding-left: $large-sp;
+
+    color: $st-color;
+
+    font-size: $p-size;
+    text-decoration: none;
+}
+
+.l-header__nav a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* =========================================================
+   BOUTONS HEADER
+   ========================================================= */
+
+.btn--secondary {
+    padding: $small-sp;
+
+    border: 2px solid $pt-color;
+    border-radius: $r-small;
+}
+
+.btn--primary {
+    padding: $small-sp;
+
+    background-color: $prim-color;
+
+    color: $bgc-color;
+
+    border: none;
+    border-radius: $r-small;
+}
+
+/* =========================================================
+   INTRODUCTION DE PAGE
+   ========================================================= */
+
+.page-intro {
+    display: flex;
+    flex-direction: column;
+
+    gap: $med-sp;
+
+    padding: $large-sp;
+
+    background-color: $alt-color;
+}
+
+.page-intro__breadcrumb {
+    color: $st-color;
+
+    font-size: $p-small;
+}
+
+.page-intro h1 {
+    color: $pt-color;
+
+    font-size: $prim-size;
+}
+
+.page-intro__description {
+    color: $ct-color;
+}
+
+/* =========================================================
+   NAVIGATION DES COMPOSANTS
+   ========================================================= */
+
+.component-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: $sec-large-sp;
+
+    padding-top: $med-sp;
+    padding-bottom: $med-sp;
+
+    border-bottom: 1px solid $border-color;
+}
+
+.component-nav a {
+    color: $prim-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.component-nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.component-section {
+    padding-top: $large-sp;
+    padding-bottom: $large-sp;
+}
+
+/* =========================================================
+   TITRES DE SECTIONS
+   ========================================================= */
+
+.section-heading h2 {
+    margin: 0;
+
+    color: $pt-color;
+
+    font-size: $sec-size;
+}
+
+.section-heading hr {
+    margin: $small-sp 0 0;
+
+    border: 0;
+    border-top: 2px solid $prim-color;
+}
+
+.section-heading > p {
+    margin: $small-med-sp 0 $small-med-sp;
+
+    color: $st-color;
+
+    font-size: $p-small;
+}
+
+p {
+    color: $st-color;
+}
+
+.token {
+    margin-bottom: $large-sp;
+    border : 4px solid red;
+}
+
+.strong {
+    color: $pt-color;
+}
+
+
+/* =========================================================
+   JETONS
+   ========================================================= */
+
+.token {
+    margin: 0;
+}
+
+
+/* Chaque ligne de jetons */
+
+.token__row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    align-items: center;
+
+    margin-bottom: $sec-large-sp;
+}
+
+
+/* Nom de la catégorie à gauche */
+
+.token__group-title {
+    margin: 0;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   COULEURS
+   ========================================================= */
+
+.token__colors {
+    display: flex;
+    align-items: flex-start;
+    gap: $small-med-sp;
+}
+
+
+.token__color {
+    width: 76px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: $small-sp;
+}
+
+
+.token__color-sample {
+    width: 42px;
+    height: 42px;
+
+    border-radius: $r-large;
+}
+
+
+.token__color p {
+    width: 100%;
+
+    margin: 0;
+
+    color: $st-color;
+
+    font-size: 11px;
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+
+.token__color-name {
+    white-space: nowrap;
+}
+
+
+/* Couleurs */
+
+.token__color-sample--main {
+    background-color: $pt-color;
+}
+
+.token__color-sample--current {
+    background-color: $ct-color;
+}
+
+.token__color-sample--secondary {
+    background-color: $st-color;
+}
+
+.token__color-sample--background {
+    background-color: $bgc-color;
+    border: 1px solid $border-color;
+}
+
+.token__color-sample--alternate {
+    background-color: $alt-color;
+    border: 1px solid $border-color;
+}
+
+.token__color-sample--border {
+    background-color: $border-color;
+}
+
+.token__color-sample--primary {
+    background-color: $prim-color;
+}
+
+.token__color-sample--hover {
+    background-color: $hover-color;
+}
+
+.token__color-sample--accent {
+    background-color: $acc-color;
+}
+
+.token__color-sample--error {
+    background-color: $error-color;
+}
+
+
+/* =========================================================
+   SCÈNES
+   ========================================================= */
+
+.token__scene-list {
+    display: flex;
+    gap: $small-med-sp;
+}
+
+
+.token__scene {
+    width: 153px;
+
+    padding: $small-med-sp;
+
+    border-radius: $r-small;
+}
+
+
+.token__scene p {
+    margin: 0;
+}
+
+
+.token__scene-name {
+    margin-bottom: $small-sp !important;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+.token__scene-code {
+    margin-top: $small-sp !important;
+
+    color: $st-color;
+    font-size: 11px;
+}
+
+
+/* Scènes */
+
+.token__scene--lac {
+    background-color: $lac-scene-c;
+    color: $bgc-color;
+}
+
+.token__scene--forest {
+    background-color: $forest-scene-c;
+    color: $bgc-color;
+}
+
+.token__scene--kiosk {
+    background-color: $kiosk-scene-c;
+    color: $pt-color;
+}
+
+
+/* =========================================================
+   TYPOGRAPHIE
+   ========================================================= */
+
+.token__type-list {
+    display: flex;
+    align-items: baseline;
+    gap: $sec-large-sp;
+}
+
+
+.token__type {
+    display: flex;
+    align-items: baseline;
+}
+
+
+.token__type-example {
+    margin: 0;
+
+    color: $pt-color;
+
+    white-space: nowrap;
+}
+
+
+.token__type-info {
+    display: none;
+}
+
+
+/* Titre 40 */
+
+.token__type--title .token__type-example {
+    font-size: $sec-size;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* Sous-titre 28 */
+
+.token__type--subtitle .token__type-example {
+    font-size: $thi-size;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/* Introduction 20 */
+
+.token__type--introduction .token__type-example {
+    font-size: $intro-size;
+    font-weight: 400;
+}
+
+
+/* Courant 16 */
+
+.token__type--current .token__type-example {
+    font-size: $p-size;
+    font-weight: 400;
+}
+
+
+/* Petit 14 */
+
+.token__type--small .token__type-example {
+    font-size: $p-small;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   ESPACEMENTS
+   ========================================================= */
+
+.token__spacing-list {
+    display: flex;
+    align-items: flex-end;
+    gap: $sec-large-sp;
+
+    height: 80px;
+}
+
+
+.token__spacing-item {
+    display: flex;
+    align-items: center;
+    gap: $small-sp;
+}
+
+
+.token__spacing-square {
+    width: 8px;
+    height: 8px;
+
+    background-color: $prim-color;
+}
+
+.token__spacing-square--16 {
+    width: 16px;
+    height: 16px;
+}
+
+.token__spacing-square--24 {
+    width: 24px;
+    height: 24px;
+}
+
+.token__spacing-square--40 {
+    width: 40px;
+    height: 40px;
+}
+
+.token__spacing-square--64 {
+    width: 64px;
+    height: 64px;
+}
+
+
+.token__spacing-item p {
+    margin: 0;
+
+    color: $st-color;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   BOUTONS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+
+.btn__row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    align-items: center;
+
+    margin-bottom: $sec-large-sp;
+}
+
+
+.btn__group-title {
+    margin: 0;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+.btn__examples {
+    display: flex;
+    align-items: center;
+    gap: $small-med-sp;
+
+    min-height: 48px;
+}
+
+
+/* ---------------------------------------------------------
+   BASE DU BOUTON
+   --------------------------------------------------------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    min-height: 40px;
+
+    padding: $small-sp $small-med-sp;
+
+    border-radius: $r-small;
+
+    font-family: inherit;
+    font-size: $p-small;
+    font-weight: 700;
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ---------------------------------------------------------
+   PRINCIPAL
+   --------------------------------------------------------- */
+
+.btn--primary {
+    background-color: $prim-color;
+    color: $bgc-color;
+
+    border: 2px solid $prim-color;
+}
+
+
+.btn--primary:hover {
+    background-color: $hover-color;
+    border-color: $hover-color;
+}
+
+
+/* ---------------------------------------------------------
+   SECONDAIRE
+   --------------------------------------------------------- */
+
+.btn--secondary {
+    background-color: $pt-color;
+    color: $bgc-color;
+
+    border: 2px solid $pt-color;
+}
+
+
+.btn--secondary:hover {
+    background-color: $hover-color;
+    border-color: $hover-color;
+}
+
+
+/* ---------------------------------------------------------
+   CONTOUR
+   --------------------------------------------------------- */
+
+.btn--outline {
+    background-color: $bgc-color;
+    color: $pt-color;
+
+    border: 2px solid $pt-color;
+}
+
+
+.btn--outline:hover {
+    background-color: $alt-color;
+}
+
+
+/* ---------------------------------------------------------
+   BOUTON CLAIR
+   --------------------------------------------------------- */
+
+.btn__dark-example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 216px;
+    height: 61px;
+
+    padding: 0;
+
+    background-color: $pt-color;
+
+    border-radius: $r-small;
+}
+
+
+.btn--light {
+    width: 146px;
+
+    background-color: $bgc-color;
+    color: $pt-color;
+
+    border: 2px solid $bgc-color;
+}
+
+
+/* ---------------------------------------------------------
+   TAILLES
+   --------------------------------------------------------- */
+
+.btn--small {
+    min-height: 32px;
+
+    padding: $small-sp $small-med-sp;
+
+    font-size: $p-small;
+}
+
+
+.btn--medium {
+    min-height: 40px;
+
+    padding: $small-sp $med-sp;
+
+    font-size: $p-size;
+}
+
+
+.btn--large {
+    min-height: 48px;
+
+    padding: $small-sp $med-sp;
+
+    font-size: $p-size;
+}
+
+
+/* ---------------------------------------------------------
+   ICÔNES
+   --------------------------------------------------------- */
+
+.btn--icone {
+    gap: $small-sp;
+}
+
+
+.btn--icone > span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* Bouton carré avec icône seule */
+
+.btn--icone[aria-label] {
+    width: 44px;
+    padding: $small-sp;
+}
+
+
+/* ---------------------------------------------------------
+   ÉTAT : SURVOL
+   --------------------------------------------------------- */
+
+.btn--hover {
+    background-color: $hover-color;
+    color: $bgc-color;
+
+    border: 2px solid $hover-color;
+}
+
+
+/* ---------------------------------------------------------
+   ÉTAT : FOCUS CLAVIER
+   --------------------------------------------------------- */
+
+.btn--focus {
+    background-color: $prim-color;
+    color: $bgc-color;
+
+    border: 2px solid $prim-color;
+
+    outline: 2px solid rgba(200, 64, 42, 0.35);
+    outline-offset: 3px;
+
+    box-shadow: 0 0 0 2px $bgc-color;
+}
+
+
+/* ---------------------------------------------------------
+   ÉTAT : DÉSACTIVÉ
+   --------------------------------------------------------- */
+
+.btn--desactive,
+.btn:disabled {
+    background-color: #DCAEA4;
+    color: $bgc-color;
+
+    border: 2px solid #DCAEA4;
+
+    cursor: not-allowed;
+}
+
+
+/* ---------------------------------------------------------
+   ÉTAT : LOADER
+   --------------------------------------------------------- */
+
+.btn--loader {
+    width: 130px;
+    height: 42px;
+
+    background-color: $prim-color;
+    color: $bgc-color;
+
+    border: 2px solid $prim-color;
+}
+
+
+.btn__loader-icon {
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    border-top-color: $bgc-color;
+
+    border-radius: $r-large;
+
+    animation: btn-loader 0.8s linear infinite;
+}
+
+
+@keyframes btn-loader {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ---------------------------------------------------------
+   COMBINAISONS / ÉTATS
+   --------------------------------------------------------- */
+
+.btn__row--states {
+    align-items: start;
+}
+
+
+.btn__states {
+    display: flex;
+    align-items: flex-start;
+    gap: $med-sp;
+}
+
+
+.btn__state {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: $small-sp;
+}
+
+
+.btn__state > span {
+    color: $st-color;
+
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+
+.badge__row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    align-items: center;
+
+    margin-bottom: $sec-large-sp;
+}
+
+
+.badge__group-title {
+    margin: 0;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+.badge__examples {
+    display: flex;
+    align-items: center;
+    gap: $sec-large-sp;
+
+    min-height: 32px;
+}
+
+
+/* ---------------------------------------------------------
+   BASE
+   --------------------------------------------------------- */
+
+.badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    min-height: 24px;
+
+    padding: 4px $small-med-sp;
+
+    border-radius: $r-large;
+
+    color: $pt-color;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   SCÈNES
+   --------------------------------------------------------- */
+
+.badge--lac {
+    background-color: $lac-scene-c;
+    color: $bgc-color;
+}
+
+
+.badge--forest {
+    background-color: $forest-scene-c;
+    color: $bgc-color;
+}
+
+
+.badge--kiosk {
+    background-color: $kiosk-scene-c;
+    color: $pt-color;
+}
+
+
+/* ---------------------------------------------------------
+   STATUTS
+   --------------------------------------------------------- */
+
+.badge--new {
+    background-color: #E5F0E5;
+    color: $forest-scene-c;
+}
+
+
+.badge--last {
+    background-color: #F8EED5;
+    color: #806019;
+}
+
+
+.badge--complete {
+    background-color: #F6E2DF;
+    color: $error-color;
+}
+
+
+/* ---------------------------------------------------------
+   TAILLES
+   --------------------------------------------------------- */
+
+.badge--small {
+    min-height: 24px;
+
+    padding: 4px $small-med-sp;
+
+    font-size: 12px;
+}
+
+
+.badge--large {
+    min-height: 32px;
+
+    padding: 6px $small-med-sp;
+
+    font-size: $p-size;
+}
+
+
+/* ---------------------------------------------------------
+   STYLES
+   --------------------------------------------------------- */
+
+.badge--round {
+    background-color: $forest-scene-c;
+    color: $bgc-color;
+
+    border-radius: $r-large;
+}
+
+
+.badge--outline {
+    background-color: $bgc-color;
+    color: $forest-scene-c;
+
+    border: 2px solid $forest-scene-c;
+}
+
+
+.badge--square {
+    background-color: $kiosk-scene-c;
+    color: $pt-color;
+
+    border-radius: $r-small;
+}
+
+
+/* ---------------------------------------------------------
+   COMPTEUR
+   --------------------------------------------------------- */
+
+.badge__counter {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: $small-sp;
+
+    min-height: 48px;
+
+    padding: $small-sp $med-sp;
+
+    background-color: $pt-color;
+
+    border-radius: $r-small;
+
+    color: $bgc-color;
+
+    font-size: $p-size;
+    font-weight: 700;
+}
+
+
+.badge__counter-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+.badge--count {
+    position: absolute;
+
+    top: -9px;
+    right: -10px;
+
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+
+    padding: 0;
+
+    background-color: $prim-color;
+    color: $bgc-color;
+
+    border-radius: $r-large;
+
+    font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: $tablet-max) {
+
+    .badge__row {
+        grid-template-columns: 140px 1fr;
+    }
+
+    .badge__examples {
+        flex-wrap: wrap;
+        gap: $small-med-sp;
+    }
+}
+
+
+@media (max-width: $phone-max) {
+
+    .badge__row {
+        grid-template-columns: 1fr;
+
+        gap: $small-med-sp;
+    }
+}
+
+/* =========================================================
+   CARTES
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   TITRE DES SOUS-SECTIONS
+   --------------------------------------------------------- */
+
+.card-section-title {
+    margin: $med-sp 0 $small-med-sp;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   GRILLES
+   --------------------------------------------------------- */
+
+.card-grid {
+    display: grid;
+
+    align-items: start;
+}
+
+
+.card-grid--base {
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    gap: $small-med-sp;
+}
+
+
+.card-grid--variants {
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr;
+
+    gap: $small-med-sp;
+}
+
+
+/* ---------------------------------------------------------
+   CARTE DE BASE
+   --------------------------------------------------------- */
+
+.card {
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background-color: $bgc-color;
+
+    border: 1px solid $border-color;
+
+    border-radius: $r-small;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE
+   --------------------------------------------------------- */
+
+.card__image {
+    display: block;
+
+    width: 100%;
+    height: 128px;
+
+    object-fit: cover;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU
+   --------------------------------------------------------- */
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: $small-med-sp;
+}
+
+
+.card__title {
+    margin: $small-sp 0 0;
+
+    color: $pt-color;
+
+    font-size: $p-size;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+
+.card__meta {
+    margin: 4px 0 0;
+
+    color: $st-color;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+.card__link {
+    margin-top: $small-med-sp;
+
+    color: $prim-color;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.card__link:hover {
+    color: $hover-color;
+
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   CARTE SANS IMAGE
+   --------------------------------------------------------- */
+
+.card--secondary {
+    min-height: 103px;
+
+    border-top: 4px solid $kiosk-scene-c;
+}
+
+
+/* ---------------------------------------------------------
+   CARTE AVEC FOOTER
+   --------------------------------------------------------- */
+
+.card--third-footer {
+    border-radius: $r-small;
+}
+
+
+.card__footer {
+    display: flex;
+    align-items: center;
+
+    gap: $small-sp;
+
+    padding: 0 $small-med-sp $small-med-sp;
+}
+
+
+/* ---------------------------------------------------------
+   VARIANTE HEADLINE
+   --------------------------------------------------------- */
+
+.card--headline {
+    border: 2px solid $lac-scene-c;
+}
+
+
+.card--headline .card__image {
+    height: 153px;
+}
+
+
+.card--headline .card__title {
+    font-size: $thi-size;
+}
+
+
+/* ---------------------------------------------------------
+   VARIANTE COMPACT
+   --------------------------------------------------------- */
+
+.card--compact .card__image {
+    height: 75px;
+}
+
+
+.card--compact .card__content {
+    padding: $small-sp $small-med-sp;
+}
+
+
+.card--compact .card__title {
+    font-size: $p-size;
+}
+
+
+.card--compact .card__link {
+    margin-top: $small-sp;
+}
+
+
+/* ---------------------------------------------------------
+   BADGES DANS LES CARTES
+   --------------------------------------------------------- */
+
+.card .badge {
+    font-size: 9px;
+    min-height: 20px;
+
+    padding: 3px $small-sp;
+}
+
+
+/* ---------------------------------------------------------
+   TEXTE EXPLICATIF SOUS LES CARTES
+   --------------------------------------------------------- */
+
+.card__caption {
+    margin: $small-med-sp 0 $med-sp;
+
+    color: $st-color;
+
+    font-size: 9px;
+}
+
+/* =========================================================
+   AUTRES CARTES
+   ========================================================= */
+
+/* =========================================================
+   CARTE HORIZONTALE
+   ========================================================= */
+
+.card--horizontal {
+    display: grid;
+
+    grid-template-columns: $card-horizontal-image-width 1fr;
+
+    width: $card-horizontal-width;
+    min-height: $card-horizontal-height;
+
+    overflow: hidden;
+
+    border: $card-border-width solid $border-color;
+    border-radius: $r-small;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE
+   --------------------------------------------------------- */
+
+.card--horizontal .card__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU
+   --------------------------------------------------------- */
+
+.card--horizontal .card__content {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: $small-med-sp;
+}
+
+
+/* ---------------------------------------------------------
+   TITRE
+   --------------------------------------------------------- */
+
+.card--horizontal .card__title {
+    margin: $small-sp 0 0;
+
+    color: $pt-color;
+
+    font-size: $p-size;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+   --------------------------------------------------------- */
+
+.card--horizontal .card__description {
+    margin: $small-med-sp 0 0;
+
+    color: $ct-color;
+
+    font-size: $card-small-font;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   LIEN
+   --------------------------------------------------------- */
+
+.card--horizontal .card__link {
+    margin-top: auto;
+}
+
+.card__other {
+    margin-top: $small-med-sp;
+}
+
+
+.card__section-title {
+    margin-bottom: $small-med-sp;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   GRILLE
+   --------------------------------------------------------- */
+
+.card__other-grid {
+    display: grid;
+
+    grid-template-columns: 170px 170px 150px 150px;
+
+    gap: 12px;
+
+    align-items: start;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CARTE FORMULE
+   ========================================================= */
+
+.card--formula {
+    position: relative;
+
+    min-height: $card-formula-height;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+
+    background-color: $bgc-color;
+
+    border: $card-border-width solid $border-color;
+    border-radius: $r-small;
+}
+
+
+.card--formula .card__body {
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    box-sizing: border-box;
+
+    padding: $small-med-sp;
+}
+
+
+.card--formula .card__title {
+    margin: 0 0 $small-sp;
+
+    color: $pt-color;
+
+    font-size: $p-size;
+    font-weight: 700;
+}
+
+
+.card__price {
+    margin: 0;
+
+    color: $prim-color;
+
+    font-size: $thi-size;
+    font-weight: 700;
+}
+
+
+.card__separator {
+    height: 1px;
+
+    margin: $small-med-sp 0;
+
+    background-color: $border-color;
+}
+
+
+/* ---------------------------------------------------------
+   LISTE DES AVANTAGES
+   --------------------------------------------------------- */
+
+.card__features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: $small-sp;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    color: $ct-color;
+
+    font-size: 11px;
+}
+
+
+.card__features li {
+    position: relative;
+
+    padding-left: 16px;
+}
+
+
+.card__features li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: $forest-scene-c;
+
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   BOUTON DE CARTE
+   --------------------------------------------------------- */
+
+.card__action {
+    width: 100%;
+
+    margin-top: auto;
+
+    min-height: 32px;
+
+    font-size: $p-small;
+}
+
+
+/* =========================================================
+   PASS 3 JOURS — CARTE MISE EN AVANT
+   ========================================================= */
+
+.card--formula-featured {
+    background-color: $pt-color;
+
+    border-color: $pt-color;
+}
+
+
+.card--formula-featured .card__title {
+    color: $bgc-color;
+}
+
+.card--formula-featured .card__price {
+    color: $acc-color;
+}
+
+
+.card--formula-featured .card__separator {
+    background-color: $ct-color;
+}
+
+
+.card--formula-featured .card__features {
+    color: $bgc-color;
+}
+
+
+.card--formula-featured .card__features li::before {
+    color: $acc-color;
+}
+
+
+/* ---------------------------------------------------------
+   BADGE "LE PLUS CHOISI"
+   --------------------------------------------------------- */
+
+.card__featured {
+    position: absolute;
+
+    top: -8px;
+    left: $small-med-sp;
+
+    padding: 3px $small-med-sp;
+
+    background-color: $acc-color;
+
+    border-radius: $r-large;
+
+    color: $pt-color;
+
+    font-size: $card-small-font;
+    font-weight: 700;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CARTE SCÈNE
+   ========================================================= */
+
+.card--band {
+    min-height: 96px;
+
+    padding: 0;
+
+    background-color: $lac-scene-c;
+
+    border-radius: $r-small;
+}
+
+.card--band .card__body {
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    box-sizing: border-box;
+
+    padding: $med-sp;
+}
+
+.card--band .card__title {
+    margin: 0 0 2px;
+
+    color: $bgc-color;
+
+    font-size: $p-size;
+    font-weight: 700;
+}
+
+.card--band .card__text {
+    margin: 0 0 $small-sp;
+
+    color: $bgc-color;
+
+    font-size: 11px;
+}
+
+.card--band .card__link {
+    margin-top: auto;
+
+    color: $bgc-color;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CARTE INFORMATIONS
+   ========================================================= */
+
+.card--info {
+    min-height: 96px;
+
+    box-sizing: border-box;
+
+    background-color: $bgc-color;
+
+    border: 1px solid $border-color;
+
+    border-radius: $r-small;
+}
+
+.card--info .card__body {
+    box-sizing: border-box;
+
+    padding: $med-sp;
+}
+
+.card__info-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: $small-sp;
+
+    margin-bottom: $small-med-sp;
+}
+
+.card__info-number {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+
+    background-color: $alt-color;
+
+    border-radius: $r-large;
+
+    color: $prim-color;
+
+    font-size: 10px;
+}
+
+.card--info .card__title {
+    margin: 0;
+
+    color: $pt-color;
+
+    font-size: $p-size;
+    font-weight: 700;
+}
+
+.card--info .card__text {
+    margin: 0;
+
+    color: $ct-color;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+/* =========================================================
+   FORMULAIRES
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+
+.form__row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    align-items: start;
+
+    margin-bottom: $sec-large-sp;
+}
+
+
+.form__group-title {
+    margin: 28px 0 0;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+.form__fields {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: $small-med-sp;
+}
+
+
+/* ---------------------------------------------------------
+   CHAMP
+   --------------------------------------------------------- */
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+.form__field label {
+    margin-bottom: $small-sp;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+.form__field input,
+.form__field select {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 42px;
+
+    padding: 0 $small-med-sp;
+
+    background-color: $bgc-color;
+
+    border: 1px solid $bf-color;
+    border-radius: $r-small;
+
+    color: $ct-color;
+
+    font-family: inherit;
+    font-size: $p-size;
+
+    outline: none;
+}
+
+
+.form__field input:focus,
+.form__field select:focus {
+    outline: none;
+}
+
+
+/* ---------------------------------------------------------
+   TEXTE D'AIDE
+   --------------------------------------------------------- */
+
+.form__help {
+    margin-top: $small-sp;
+
+    color: $st-color;
+
+    font-size: 11px;
+}
+
+
+/* ---------------------------------------------------------
+   FOCUS
+   --------------------------------------------------------- */
+
+.form--focus input {
+    border-color: $prim-color;
+
+    box-shadow:
+        0 0 0 2px rgba(200, 64, 42, 0.25);
+}
+
+
+/* ---------------------------------------------------------
+   EMAIL / ERREUR
+   --------------------------------------------------------- */
+
+.form--mail input {
+    border-color: $error-color;
+}
+
+
+.form__error {
+    margin-top: $small-sp;
+
+    color: $error-color;
+
+    font-size: 11px;
+}
+
+
+/* ---------------------------------------------------------
+   DÉSACTIVÉ
+   --------------------------------------------------------- */
+
+.form--desactive input {
+    background-color: $alt-color;
+
+    color: $st-color;
+
+    border-color: $bf-color;
+
+    cursor: not-allowed;
+}
+
+
+/* ---------------------------------------------------------
+   LISTE ET CASES
+   --------------------------------------------------------- */
+
+.form__list {
+    display: flex;
+    align-items: flex-end;
+
+    gap: $sec-large-sp;
+}
+
+
+.form--select {
+    width: 252px;
+}
+
+
+.form--select select {
+    appearance: auto;
+}
+
+
+/* ---------------------------------------------------------
+   CHECKBOX
+   --------------------------------------------------------- */
+
+.form__checkbox {
+    display: flex;
+
+    align-items: center;
+
+    gap: $small-med-sp;
+
+    min-height: 42px;
+
+    color: $ct-color;
+
+    font-size: $p-size;
+
+    cursor: pointer;
+}
+
+
+.form__checkbox input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.form__checkbox-box {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid $bf-color;
+
+    border-radius: $r-small;
+
+    color: $bgc-color;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.form__checkbox input:checked + .form__checkbox-box {
+    background-color: $prim-color;
+
+    border-color: $prim-color;
+}
+
+
+.form__checkbox-text {
+    color: $ct-color;
+}
+
+/* =========================================================
+   FILTRES
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+
+.filter__row {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    align-items: start;
+
+    margin-bottom: $sec-large-sp;
+}
+
+
+.filter__group-title {
+    margin: $small-med-sp 0 0;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+.filter__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* ---------------------------------------------------------
+   GROUPE DE FILTRES
+   --------------------------------------------------------- */
+
+.filter {
+    display: flex;
+
+    align-items: center;
+
+    gap: $small-sp;
+}
+
+
+.filter__button {
+    height: 40px;
+
+    padding: 0 $med-sp;
+
+    background-color: $bgc-color;
+
+    border: 1px solid $border-color;
+    border-radius: $r-large;
+
+    color: $ct-color;
+
+    font-family: inherit;
+    font-size: $p-size;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.filter__button:hover {
+    border-color: $pt-color;
+}
+
+
+/* ---------------------------------------------------------
+   FILTRE ACTIF
+   --------------------------------------------------------- */
+
+.filter--is-active {
+    background-color: $pt-color;
+
+    border-color: $pt-color;
+
+    color: $bgc-color;
+}
+
+
+/* ---------------------------------------------------------
+   TEXTE SOUS LES FILTRES
+   --------------------------------------------------------- */
+
+.filter__caption {
+    margin: $small-sp 0 0;
+
+    color: $st-color;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   QUESTIONS FRÉQUENTES
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   STRUCTURE
+   --------------------------------------------------------- */
+
+.faq__row {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    align-items: start;
+
+    margin-bottom: $small-med-sp;
+}
+
+
+.faq__group-title {
+    margin: $med-sp 0 0;
+
+    color: $pt-color;
+
+    font-size: $p-small;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   FAQ
+   --------------------------------------------------------- */
+
+.faq {
+    overflow: hidden;
+
+    background-color: $bgc-color;
+
+    border: 1px solid $border-color;
+
+    border-radius: $r-med;
+}
+
+
+/* ---------------------------------------------------------
+   QUESTION
+   --------------------------------------------------------- */
+
+.faq__question {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 52px;
+
+    padding: $small-med-sp $med-sp;
+
+    background-color: transparent;
+
+    border: none;
+
+    color: $pt-color;
+
+    font-family: inherit;
+    font-size: $p-size;
+    font-weight: 700;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.faq__arrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    color: $pt-color;
+
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+/* ---------------------------------------------------------
+   FAQ FERMÉE
+   --------------------------------------------------------- */
+
+.faq--is-closed {
+    border-color: $border-color;
+}
+
+
+.faq--is-closed .faq__answer {
+    display: none;
+}
+
+
+/* ---------------------------------------------------------
+   FAQ OUVERTE
+   --------------------------------------------------------- */
+
+.faq--is-open {
+    border: 2px solid $pt-color;
+}
+
+
+.faq--is-open .faq__question {
+    min-height: 52px;
+}
+
+
+/* ---------------------------------------------------------
+   RÉPONSE
+   --------------------------------------------------------- */
+
+.faq__answer {
+    padding: 0 $med-sp $med-sp;
+}
+
+
+.faq__answer p {
+    margin: 0;
+
+    color: $ct-color;
+
+    font-size: $p-size;
+    line-height: 1.6;
+}
