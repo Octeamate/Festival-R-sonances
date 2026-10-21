@@ -16,6 +16,9 @@ $lac-scene-c: #1F4E8C;
 $forest-scene-c: #2F6B3A;
 $kiosk-scene-c: #B87A1E;
 
+// Font family
+$font-family: 'Inter';
+
 //Font-Size
 $prim-size:56px;
 $sec-size:40px;
@@ -23,6 +26,11 @@ $thi-size:28px;
 $intro-size:20px;
 $p-size:16px;
 $p-small:14px;
+
+// Font-weight
+$max-weight: 800;
+$med-weight: 700;
+$min-weight: 400;
 
 //Spacement
 $large-sp: 64px;
@@ -42,6 +50,8 @@ $tablet-max: 1024px;
 $desktop-min: 1025px;
 
 // Cartes
+
+$max-width: 204px;
 
 $card-horizontal-width: 530px;
 $card-horizontal-image-width: 200px;

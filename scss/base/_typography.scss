@@ -1,43 +1,47 @@
+@use '../abstracts'as *;
+
 body{
-    font-family: 'Inter';
+    font-family: $font-family;
 }
 
 h1{
-    font-size: 56px;
-    font-weight: 800;
-    gap: 64px;
+    font-size: $prim-size;
+    font-weight: $max-weight;
+    gap: $large-sp;
 }
 
 h2{
-    font-size: 40px;
-    font-weight: 700;
-    gap: 48px;
+    font-size: $sec-size;
+    font-weight: $med-weight;
+    gap: $sec-large-sp;
+    color: $pt-color;
 }
 
 h3{
-    font-size: 28px;
-    font-weight: 700;
-    gap: 36px;
+    font-size: $thi-size;
+    font-weight: $med-weight;
+    gap: $med-sp;
 }
 
 h4{
-    font-size: 20px;
-    font-weight: 400;
-    gap: 32px;
+    font-size: $intro-size;
+    font-weight: $min-weight;
+    gap: $small-med-sp;
 }
 
 p{
-    font-size: 16px;
-    font-weight: 400;
-    gap: 26px;
+    font-size: $p-small;
+    font-weight: $min-weight;
+    gap: $small-sp;
+    color: $st-color;
 }
 
 small{
-    font-size: 14px;
-    font-weight: 400;
-    gap: 26px;
+    font-size: $p-small;
+    font-weight: $min-weight;
+    gap: $small-sp;
 }
 
 .strong {
-    font-weight: 700;
+    font-weight: $med-weight;
 }

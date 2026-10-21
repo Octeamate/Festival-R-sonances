@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as *;
+
+.l-header__nav a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.component-nav a:hover {
+    text-decoration: underline;
+}
