@@ -3,9 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Résonances - Festival au bord du lac</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <a href="composants.html">Page composants</a>
+
+    <header class="l-header">
+        <img src="./assets/img/logo.png" alt="Logo" class="l-header__logo">
+            <div>
+                <strong>RÉSONANCES</strong>
+                <small>Festival - 9 au 11 juillet 2027</small>
+            </div>
+        </a>
+
+        <nav class="l-header__nav">
+            <li>
+                <ul><a href="index.html">Accueil</a></ul>
+                <ul><a href="programme.html">Programme</a></ul>
+                <ul><a href="billetterie.html">Billetterie</a></ul>
+                <ul><a href="infos.html">Infos pratiques</a></ul>
+            </li>
+        </nav>
+
+        <div class="l-header__actions">
+            <button class="btn btn--secondary">Mode sombre</button>
+            <button class="btn btn--primary">Réserver</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <p class="date">9, 10 ET 11 JUILLET 2027 - LAC DES AULNES</p>
+
+            <h1>Trois jours, trois scènes,<br>un lac.</h1>
+
+            <p class="hero__description">
+                Pop et rock au bord de l'eau, musiques électroniques
+                sous les arbres, jazz au kiosque : quarante artistes
+                à découvrir.
+            </p>
+
+            <div class="hero--btn">
+                <a href="#billetterie" class="btn--primary">
+                    Réserver mon pass
+                </a>
+                <a href="#programme" class="btn--outline">
+                    Voir le programme
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- PRÉSENTATION DU FESTIVAL -->
+        <section class="container__presentation" id="infos">
+            <div class="presentation__text">
+                <h2>Le festival</h2>
+                <p>
+                    Depuis 2015, Résonances réunit chaque été les
+                    publics de toutes les musiques sur les rives du
+                    lac des Aulnes. Une programmation exigeante,
+                    des scènes à taille humaine et un site entièrement
+                    accessible à pied.
+                </p>
+            </div>
+
+            <div class="presentation__statistics">
+                <div class="statistics__card">
+                    <strong>40</strong>
+                    <span>artistes</span>
+                </div>
+
+                <div class="statistics__card">
+                    <strong>3</strong>
+                    <span>scènes</span>
+                </div>
+
+                <div class="statistics__card">
+                    <strong>3</strong>
+                    <span>jours</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TÊTES D'AFFICHE -->
+        <section class="container__artists" id="programme">
+            <div class="artists__heading">
+                <h2>Têtes d'affiche</h2>
+                <a href="#programme-complet">Tout le programme →</a>
+            </div>
+
+            <div class="artist__grid">
+
+                <article class="grid__card">
+                    <img src="images/lune-rousse.jpg"
+                        alt="Scène de concert aux lumières rouges">
+
+                    <div class="grid__info">
+                        <span class="tag tag-blue">Scène du Lac</span>
+                        <h3>LUNE ROUSSE</h3>
+                        <p>Pop · Ven. 9 · 22 h 30</p>
+                        <a href="#programme-complet">Voir la fiche →</a>
+                    </div>
+                </article>
+
+                <article class="grid__card">
+                    <img src="images/ostra.jpg" alt="Concert électronique avec des lumières bleues">
+
+                    <div class="card__info">
+                        <span class="tag tag-green">Scène de la Forêt</span>
+                        <h3>OSTRA</h3>
+                        <p>Électro · Sam. 10 · 23 h 45</p>
+                        <a href="#programme-complet">Voir la fiche →</a>
+                    </div>
+                </article>
+
+                <article class="grid__card">
+                    <img src="images/trio-sablier.jpg" alt="Musicien jouant du saxophone">
+
+                    <div class="card__info">
+                        <span class="tag tag-gold">Le Kiosque</span>
+                        <h3>TRIO SABLIER</h3>
+                        <p>Jazz · Dim. 11 · 19 h 00</p>
+                        <a href="#programme-complet">Voir la fiche →</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="container__stages">
+            <h2>Les scènes</h2>
+
+            <div class="stages__grid">
+
+                <article class="grid__card stage-lake">
+                    <h3>Scène du Lac</h3>
+                    <p>Pop et rock</p>
+                    <a href="#programme-complet">Découvrir la scène →</a>
+                </article>
+
+                <article class="grid__card stage-forest">
+                    <h3>Scène de la Forêt</h3>
+                    <p>Musiques électroniques</p>
+                    <a href="#programme-complet">Découvrir la scène →</a>
+                </article>
+
+                <article class="grid__card stage-kiosk">
+                    <h3>Le Kiosque</h3>
+                    <p>Jazz et acoustique</p>
+                    <a href="#programme-complet">Découvrir la scène →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- EMPLACEMENTS POUR LES AUTRES SECTIONS -->
+        <section id="billetterie" class="container__booking">
+            <h2>Prêt à vivre le festival ?</h2>
+            <p>Trois jours de musique au bord du lac des Aulnes.</p>
+            <a href="#haut" class="btn--primary">Réserver mon pass</a>
+        </section>
+
+        <div id="programme-complet"></div>
+
+    </main>
 </body>
+</html>
+
 </html>
