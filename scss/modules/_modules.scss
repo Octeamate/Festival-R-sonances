@@ -26,24 +26,31 @@
 
 .l-header__actions{
     display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    padding: $small-sp;
 }
 
 .btn--secondary {
-    padding: $small-sp;
 
     border: 2px solid $pt-color;
     border-radius: $r-small;
 }
 
-.btn--primary {
-    padding: $small-sp;
 
+.btn--primary {
     background-color: $prim-color;
 
     color: $bgc-color;
 
     border: none;
     border-radius: $r-small;
+}
+
+.btn--outline{
+    
 }
 
 // INTRODUCTION DE PAGE
@@ -73,6 +80,22 @@
 
 .m-hero__description {
     color: $ct-color;
+}
+
+
+// Accueil
+.hero{
+    background-image: url(../../assets/img/img-concert.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &__content{
+        padding: $large-sp $sec-large-sp;
+        
+        // &__date{
+        //     color:$acc-color;
+        // }
+    }
 }
 
 

@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 img {
   display: flex;
 }
@@ -119,16 +124,19 @@ small {
 
 .l-header__actions {
   display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 8px;
 }
 
 .btn--secondary {
-  padding: 8px;
   border: 2px solid #1C1B2E;
   border-radius: 6px;
 }
 
 .btn--primary {
-  padding: 8px;
   background-color: #C8402A;
   color: #FFFFFF;
   border: none;
@@ -155,6 +163,16 @@ small {
 
 .m-hero__description {
   color: #3A3950;
+}
+
+.hero {
+  background-image: url(../../assets/img/img-concert.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero__content {
+  padding: 64px 40px;
 }
 
 .component-section,
